@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio de Lenin Omar Zapata Esparza</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #ecf0f1;
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 120px 40px 40px 40px;
+        }
+        .project {
+            display: none;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .project.active {
+            display: block;
+        }
+        .project h2 {
+            color: #2980b9;
+        }
+        .gallery {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .gallery img {
+            width: 48%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ecf0f1;
+            margin-top: 40px;
+        }
+        #lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Portafolio de Lenin Omar Zapata Esparza</h1>
+    <nav>
+        <a onclick="showProject('proyecto1')">Proyecto 1</a>
+        <a onclick="showProject('proyecto2')">Proyecto 2</a>
+        <a onclick="showProject('mini-proyectos')">Snippets Útiles</a>
+    </nav>
+</header>
+
+<main>
+    <section class="project active" id="proyecto1">
+        <h2>Dashboard de Cumplimiento: Demanda vs Venta vs Abastecimiento</h2>
+        <p><strong>Objetivo:</strong> Desarrollar una herramienta visual que permita al área de Supply Chain comparar la demanda proyectada, las ventas reales y las órdenes de compra, facilitando la toma de decisiones para el abastecimiento oportuno.</p>
+        <p><strong>Herramientas utilizadas:</strong> QlikView · SQL Server · Power Automate</p>
+        <p><strong>Rol:</strong> Líder de proyecto y desarrollador principal</p>
+        <p><strong>Descripción:</strong> Diseñé e implementé un dashboard interactivo que compara las piezas proyectadas (FCST) con las piezas ordenadas (PO) a lo largo de las semanas del año. El tablero incluye filtros dinámicos por clase, cliente, región y tendencias, y permite a los usuarios explorar los datos de forma detallada. También se integró con Power Automate para automatizar actualizaciones y alertas.</p>
+        <p><strong>Impacto:</strong> El área de Supply Chain utiliza activamente este dashboard para monitorear el cumplimiento de la demanda y ajustar el abastecimiento, mejorando la eficiencia operativa y reduciendo riesgos de desabasto.</p>
+        <div class="gallery">
+            <img src="dashboard.png" alt="Dashboard de cumplimiento" onclick="openLightbox(this.src)">
+        </div>
+    </section>
+
+    <section class="project" id="proyecto2">
+        <h2>RPA Logística Aérea de Flores</h2>
+        <p><strong>Objetivo:</strong> Automatizar la extracción, limpieza y consolidación de datos logísticos provenientes de múltiples fuentes para generar reportes visuales y alertas que optimicen la planificación de itinerarios aéreos.</p>
+        <p><strong>Herramientas utilizadas:</strong> Power Automate · Python (FastAPI, Playwright) · API REST · Excel · Power BI · Alertas en Microsoft Teams</p>
+        <p><strong>Rol:</strong> Líder de proyecto y desarrollador principal</p>
+        <p><strong>Descripción:</strong> Diseñé e implementé una solución RPA que automatiza la recopilación de datos logísticos desde portales web, archivos Excel y APIs. Los datos son procesados mediante FastAPI y Playwright, y luego consolidados en reportes visuales en Power BI. Se integraron alertas automáticas vía Teams para notificar sobre cambios críticos en itinerarios o costos.</p>
+        <p><strong>Impacto:</strong> La solución redujo significativamente la carga operativa manual, mejoró la precisión en la planificación logística y permitió una visualización clara de costos por aerolínea, rutas y semanas.</p>
+        <div class="gallery">
+            <img src="dashboard_logistica_1.png" alt="Dashboard logístico 1" onclick="openLightbox(this.src)">
+            <img src="dashboard_logistica_2.png" alt="Dashboard logístico 2" onclick="openLightbox(this.src)">
+        </div>
+    </section>
+    
+    
+<section class="project" id="mini-proyectos">
+    <h2>Mini Proyectos</h2>
+    <div class="gallery">
+        <div style="width: 48%; background: #f0f0f0; padding: 15px; border-radius: 8px;">
+            <h3>Script de limpieza de Excel</h3>
+            <p>Python + Pandas para estandarizar y limpiar archivos de ventas.</p>
+            https://github.com/tuusuario/mini-proyecto-excel
+        </div>
+        <div style="width: 48%; background: #f0f0f0; padding: 15px; border-radius: 8px;">
+            <h3>Flujo de Power Automate</h3>
+            <p>Automatización para guardar adjuntos de correos en SharePoint.</p>
+            https://github.com/tuusuario/flujo-powerautomate
+        </div>
+    </div>
+</section>
+
+    
+</main>
+
+<div id="lightbox" onclick="closeLightbox()">
+    <img src="" alt="Vista ampliada">
+</div>
+
+<footer>
+    &copy; 2024 Lenin Omar Zapata Esparza
+</footer>
+
+<script>
+    function showProject(id) {
+        const projects = document.querySelectorAll('.project');
+        projects.forEach(p => p.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openLightbox(src) {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'flex';
+        lightbox.querySelector('img').src = src;
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
