@@ -38,6 +38,6 @@ Actualmente me desempeño como **Coordinador de Información**, donde diseño e 
 
 ## 📫 Contacto
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/tuusuario)
-- 📧 lenin.zapata@email.com
+- 💼 [LinkedIn](https://www.linkedin.com/in/lenin-zapata-esparza-a5060a179/)
+- 📧 lenin.zapata.1993@gmail.com
 - 🌍 Quito, Ecuador
