@@ -1,6 +1,6 @@
 # 👨‍💻 Lenin Omar Zapata Esparza
 
-**Data Engineer | Coordinador de Información | +5 años de experiencia en soluciones de datos, automatización y visualización**
+**Data Engineer | +5 años de experiencia en soluciones de datos, automatización y visualización**
 
 ---
 
@@ -13,7 +13,7 @@ Profesional apasionado por transformar datos en decisiones estratégicas. Con m�
 - **Azure Data Factory**, **REST APIs**
 - **Qlik Sense**
 
-Actualmente me desempeño como **Coordinador de Información**, donde diseño e implemento soluciones de inteligencia de datos para planificación integrada y eficiencia operativa.
+Actualmente me desempeño como **Coordinador de Información**, donde lidero el diseño e implementación de soluciones de inteligencia de datos para planificación integrada y eficiencia operativa.
 
 ---
 
