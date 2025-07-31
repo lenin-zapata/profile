@@ -44,6 +44,6 @@ Currently, I work as an **Data and Information Coordinator**, where I lead the d
 
 ## 📫 Contact
 
-[![LinkedIn](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg)](https://www.linkedin.com/in/leninzapata-profile/)  
+💼 [LinkedIn](https://www.linkedin.com/in/leninzapata-profile/)  
 📧 lenin.zapata.1993@gmail.com  
 🌍 Quito, Ecuador
