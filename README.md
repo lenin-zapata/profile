@@ -36,6 +36,12 @@ Actualmente me desempeño como **Coordinador de Información**, donde diseño e 
 
 ---
 
+## 🌐 Sitio Web
+
+👉 [Ver portafolio en HTML](portfolio/index.html)
+
+---
+
 ## 📫 Contacto
 
 - 💼 [LinkedIn](https://www.linkedin.com/in/lenin-zapata-esparza-a5060a179/)
