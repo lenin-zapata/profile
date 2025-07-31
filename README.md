@@ -38,7 +38,7 @@ Actualmente me desempeño como **Coordinador de Información**, donde diseño e 
 
 ## 🌐 Sitio Web
 
-👉 [Ver portafolio en HTML](https://lenin-zapata.github.io/profile/)
+👉 [Ver portafolio](https://lenin-zapata.github.io/profile/)
 
 ---
 
