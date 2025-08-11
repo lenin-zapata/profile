@@ -12,6 +12,7 @@
             background-color: #f9f9f9;
             scroll-behavior: smooth;
         }
+        
         header {
             background-color: #2c3e50;
             color: white;
@@ -21,13 +22,32 @@
             top: 0;
             z-index: 1000;
         }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
         header h1 {
             margin: 0;
             font-size: 24px;
         }
+        
+        #langToggle {
+            padding: 8px 16px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
         nav {
             margin-top: 10px;
         }
+        
         nav a {
             color: #ecf0f1;
             margin-right: 20px;
@@ -35,12 +55,15 @@
             font-weight: bold;
             cursor: pointer;
         }
+        
         nav a:hover {
             text-decoration: underline;
         }
+        
         main {
-            margin-top: 80px; /* altura del header */
+            margin-top: 100px; /* altura del header */
         }
+
         .project {
             display: none;
             background-color: white;
@@ -129,24 +152,47 @@
             border: none;
         }
 
+        .title {
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            color: #2980b9;
+        }
+
+        #langToggle {
+            padding: 8px 16px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Portafolio de Lenin Omar Zapata Esparza</h1>
-    <nav>
-        <a onclick="showProject('proyecto1')">Proyecto 1</a>
-        <a onclick="showProject('proyecto2')">Proyecto 2</a>
-        <a onclick="showProject('mini-proyectos')">Snippets Útiles</a>
-    </nav>
-</header>
+    <header>
+        <div class="header-top">
+            <h1>Portafolio de Lenin Omar Zapata Esparza</h1>
+            <button id="langToggle">Español</button>
+        </div>
+        <nav>
+            <a onclick="showProject('proyecto1')">Proyecto 1</a>
+            <a onclick="showProject('proyecto2')">Proyecto 2</a>
+            <a onclick="showProject('mini-proyectos')">Snippets Útiles</a>
+        </nav>
+    </header>
 
 <main>
     <section id="proyecto1">
         <div class="resumen">
-            <h2>Dashboard de Cumplimiento: Demanda vs Venta vs Abastecimiento</h2>
-            
+            <div class="title">
+                <h2>Strategic Performance Monitor: Forecast, Sales & Inventory</h2>
+            </div>
+                
             <h3>📌 Resumen Ejecutivo</h3>
             <p>Este dashboard permite visualizar el grado de cumplimiento entre la demanda proyectada, las ventas reales y el abastecimiento disponible. Está diseñado para apoyar la toma de decisiones estratégicas en áreas de planificación comercial, compras y logística, facilitando la identificación de brechas y oportunidades de mejora.</p>
             <p>La herramienta se alimenta de datos históricos y proyectados, y presenta indicadores clave que permiten evaluar el rendimiento por categoría, producto y periodo. Su implementación ha contribuido a mejorar la eficiencia operativa y la alineación entre áreas comerciales y operativas.</p>
@@ -193,6 +239,44 @@
         }
     </script>
 
+    <section id="proyecto2">
+        <div class="resumen">
+            <div class="title">
+                <h2>Strategic Performance Monitor: Forecast, Sales & Inventory</h2>
+            </div>
+                
+            <h3>📌 Resumen Ejecutivo</h3>
+            <p>Este dashboard permite visualizar el grado de cumplimiento entre la demanda proyectada, las ventas reales y el abastecimiento disponible. Está diseñado para apoyar la toma de decisiones estratégicas en áreas de planificación comercial, compras y logística, facilitando la identificación de brechas y oportunidades de mejora.</p>
+            <p>La herramienta se alimenta de datos históricos y proyectados, y presenta indicadores clave que permiten evaluar el rendimiento por categoría, producto y periodo. Su implementación ha contribuido a mejorar la eficiencia operativa y la alineación entre áreas comerciales y operativas.</p>
+            
+            <button onclick="toggleDetalles()">Ver más</button>
+        </div>
+        
+        <div id="detallesProyecto1" class="detalles" style="display: none;">
+            <h3>🎯 Objetivo</h3>
+            <p>Visualizar el cumplimiento de la demanda en relación con las ventas reales y el abastecimiento disponible, permitiendo identificar brechas y oportunidades de mejora en la planificación comercial.</p>
+            
+            <h3>📊 Métricas Clave</h3>
+            <ul>
+                <li><strong>Demanda:</strong> Proyección de ventas esperadas.</li>
+                <li><strong>Ventas:</strong> Ventas reales registradas.</li>
+                <li><strong>Abastecimiento:</strong> Inventario disponible para cubrir la demanda.</li>
+                <li><strong>Órdenes Totales:</strong> Número de pedidos procesados.</li>
+            </ul>
+            
+            <h3>🛠️ Herramientas Utilizadas</h3>
+            <p>Google Looker Studio para visualización, fuentes de datos conectadas desde hojas de cálculo y bases de datos internas.</p>
+            <h3>📈 Impacto</h3>
+            <p>Este dashboard ha permitido al equipo de planificación tomar decisiones más informadas sobre compras, producción y distribución, reduciendo el desabastecimiento y mejorando la eficiencia operativa.</p>
+        </div>
+        
+        <iframe src="https://lookerstudio.google.com/embed/reporting/0f8aaeab-fba3-4386-b88e-d70e54ae994f/page/1y1TF"
+            allowfullscreen
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+            
+            </iframe>
+    </section>
+    
     <section class="project" id="mini-proyectos">
         <h2>Mini Proyectos</h2>
         <div class="gallery">
@@ -219,7 +303,8 @@
         projects.forEach(p => p.classList.remove('active', 'fullscreen'));
         const selected = document.getElementById(id);
         selected.classList.add('active');
-        if (id === 'proyecto1') selected.classList.add('fullscreen');
+        if (id === 'proyecto1') 
+            selected.classList.add('fullscreen');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
