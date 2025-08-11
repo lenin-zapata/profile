@@ -107,6 +107,28 @@
             max-height: 90%;
             border-radius: 10px;
         }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .resumen, .detalles {
+            padding: 25px;
+            background-color: #fff;
+        }
+        
+        iframe {
+            width: 100%;
+            height: calc(100vh - 80px);
+            border: none;
+        }
+
     </style>
 </head>
 <body>
@@ -121,20 +143,55 @@
 </header>
 
 <main>
-    <section class="project active fullscreen" id="proyecto1">
-        <h2>Dashboard de Cumplimiento: Demanda vs Venta vs Abastecimiento</h2>
+    <section id="proyecto1">
+        <div class="resumen">
+            <h2>Dashboard de Cumplimiento: Demanda vs Venta vs Abastecimiento</h2>
+            
+            <h3>📌 Resumen Ejecutivo</h3>
+            <p>Este dashboard permite visualizar el grado de cumplimiento entre la demanda proyectada, las ventas reales y el abastecimiento disponible. Está diseñado para apoyar la toma de decisiones estratégicas en áreas de planificación comercial, compras y logística, facilitando la identificación de brechas y oportunidades de mejora.</p>
+            <p>La herramienta se alimenta de datos históricos y proyectados, y presenta indicadores clave que permiten evaluar el rendimiento por categoría, producto y periodo. Su implementación ha contribuido a mejorar la eficiencia operativa y la alineación entre áreas comerciales y operativas.</p>
+            
+            <button onclick="toggleDetalles()">Ver más</button>
+        </div>
+        
+        <div id="detallesProyecto1" class="detalles" style="display: none;">
+            <h3>🎯 Objetivo</h3>
+            <p>Visualizar el cumplimiento de la demanda en relación con las ventas reales y el abastecimiento disponible, permitiendo identificar brechas y oportunidades de mejora en la planificación comercial.</p>
+            
+            <h3>📊 Métricas Clave</h3>
+            <ul>
+                <li><strong>Demanda:</strong> Proyección de ventas esperadas.</li>
+                <li><strong>Ventas:</strong> Ventas reales registradas.</li>
+                <li><strong>Abastecimiento:</strong> Inventario disponible para cubrir la demanda.</li>
+                <li><strong>Órdenes Totales:</strong> Número de pedidos procesados.</li>
+            </ul>
+            
+            <h3>🛠️ Herramientas Utilizadas</h3>
+            <p>Google Looker Studio para visualización, fuentes de datos conectadas desde hojas de cálculo y bases de datos internas.</p>
+            <h3>📈 Impacto</h3>
+            <p>Este dashboard ha permitido al equipo de planificación tomar decisiones más informadas sobre compras, producción y distribución, reduciendo el desabastecimiento y mejorando la eficiencia operativa.</p>
+        </div>
+        
         <iframe src="https://lookerstudio.google.com/embed/reporting/0f8aaeab-fba3-4386-b88e-d70e54ae994f/page/1y1TF"
             allowfullscreen
-            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allowizar la extracción, limpieza y consolidación de datos logísticos provenientes de múltiples fuentes para generar reportes visuales y alertas que optimicen la planificación de itinerarios aéreos.</p>
-        <p><strong>Herramientas utilizadas:</strong> Power Automate · Python (FastAPI, Playwright) · API REST · Excel · Power BI · Alertas en Microsoft Teams</p>
-        <p><strong>Rol:</strong> Líder de proyecto y desarrollador principal</p>
-        <p><strong>Descripción:</strong> Diseñé e implementé una solución RPA que automatiza la recopilación de datos logísticos desde portales web, archivos Excel y APIs. Los datos son procesados mediante FastAPI y Playwright, y luego consolidados en reportes visuales en Power BI. Se integraron alertas automáticas vía Teams para notificar sobre cambios críticos en itinerarios o costos.</p>
-        <p><strong>Impacto:</strong> La solución redujo significativamente la carga operativa manual, mejoró la precisión en la planificación logística y permitió una visualización clara de costos por aerolínea, rutas y semanas.</p>
-        <div class="gallery">
-            <img src="dashboard_logistica_1.png" alt="Dashboard logístico 1" onclick="openLightbox(this.src)">
-            <img src="dashboard_logistica_2.png" alt="Dashboard logístico 2" onclick="openLightbox(this.src)">
-        </div>
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+            
+            </iframe>
     </section>
+    
+    <script>
+        function toggleDetalles() {
+            const detalles = document.getElementById('detallesProyecto1');
+            const btn = event.target;
+            if (detalles.style.display === 'none') {
+                detalles.style.display = 'block';
+                btn.textContent = 'Ver menos';
+            } else {
+                detalles.style.display = 'none';
+                btn.textContent = 'Ver más';
+            }
+        }
+    </script>
 
     <section class="project" id="mini-proyectos">
         <h2>Mini Proyectos</h2>
@@ -147,7 +204,6 @@
             <div style="width: 48%; background: #f0f0f0; padding: 15px; border-radius: 8px;">
                 <h3>Flujo de Power Automate</h3>
                 <p>Automatización para guardar adjuntos de correos en SharePoint.</p>
-                <a href="https.com/tuusuario/flujo-powerautomate
             </div>
         </div>
     </section>
@@ -156,10 +212,6 @@
 <div id="lightbox" onclick="closeLightbox()">
     <img src="" alt="Vista ampliada">
 </div>
-
-<footer>
-    &copy; 2024 Lenin Omar Zapata Esparza
-</footer>
 
 <script>
     function showProject(id) {
@@ -181,6 +233,10 @@
         document.getElementById('lightbox').style.display = 'none';
     }
 </script>
+
+<footer>
+    &copy; 2024 Lenin Omar Zapata Esparza
+</footer>
 
 </body>
 </html>
