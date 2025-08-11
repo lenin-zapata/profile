@@ -39,12 +39,11 @@
             text-decoration: underline;
         }
         main {
-            padding: 120px 40px 40px 40px;
+            margin-top: 80px; /* altura del header */
         }
         .project {
             display: none;
             background-color: white;
-            padding: 0;
             border-radius: 10px;
             margin-bottom: 40px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -57,12 +56,14 @@
             color: #2980b9;
             padding: 25px 25px 0 25px;
         }
-        .iframe-wrapper {
-            width: 100%;
-            height: 80vh;
-            padding: 0 25px 25px 25px;
+        .fullscreen {
+            height: calc(100vh - 80px); /* altura total menos el header */
+            padding: 0;
+            margin: 0;
+            border-radius: 0;
+            box-shadow: none;
         }
-        .iframe-wrapper iframe {
+        .fullscreen iframe {
             width: 100%;
             height: 100%;
             border: none;
@@ -72,6 +73,7 @@
             gap: 10px;
             flex-wrap: wrap;
             margin-top: 10px;
+            padding: 25px;
         }
         .gallery img {
             width: 48%;
@@ -119,12 +121,11 @@
 </header>
 
 <main>
-    <section class="project active" id="proyecto1">
+    <section class="project active fullscreen" id="proyecto1">
         <h2>Dashboard de Cumplimiento: Demanda vs Venta vs Abastecimiento</h2>
-        <div class="iframe-wrapper">
-            <iframe src="https://lookerstudio.google.com/embed/reporting/0f8aaeab-fba3-4386-b88e-d70e54ae994f/page/1y1TF"
-                allowfullscreen
-                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allowvo:</strong> Automatizar la extracción, limpieza y consolidación de datos logísticos provenientes de múltiples fuentes para generar reportes visuales y alertas que optimicen la planificación de itinerarios aéreos.</p>
+        <iframe src="https://lookerstudio.google.com/embed/reporting/0f8aaeab-fba3-4386-b88e-d70e54ae994f/page/1y1TF"
+            allowfullscreen
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allowizar la extracción, limpieza y consolidación de datos logísticos provenientes de múltiples fuentes para generar reportes visuales y alertas que optimicen la planificación de itinerarios aéreos.</p>
         <p><strong>Herramientas utilizadas:</strong> Power Automate · Python (FastAPI, Playwright) · API REST · Excel · Power BI · Alertas en Microsoft Teams</p>
         <p><strong>Rol:</strong> Líder de proyecto y desarrollador principal</p>
         <p><strong>Descripción:</strong> Diseñé e implementé una solución RPA que automatiza la recopilación de datos logísticos desde portales web, archivos Excel y APIs. Los datos son procesados mediante FastAPI y Playwright, y luego consolidados en reportes visuales en Power BI. Se integraron alertas automáticas vía Teams para notificar sobre cambios críticos en itinerarios o costos.</p>
@@ -141,12 +142,13 @@
             <div style="width: 48%; background: #f0f0f0; padding: 15px; border-radius: 8px;">
                 <h3>Script de limpieza de Excel</h3>
                 <p>Python + Pandas para estandarizar y limpiar archivos de ventas.</p>
-                <a href="https://github.com/tuusuario/ecto-excel
+                https://github.com/tuusuario/mini-proyecto-excel
             </div>
             <div style="width: 48%; background: #f0f0f0; padding: 15px; border-radius: 8px;">
                 <h3>Flujo de Power Automate</h3>
                 <p>Automatización para guardar adjuntos de correos en SharePoint.</p>
-                <a href="https://github.com/tuusuario/flujo-powerautom       </div>
+                <a href="https.com/tuusuario/flujo-powerautomate
+            </div>
         </div>
     </section>
 </main>
@@ -162,8 +164,10 @@
 <script>
     function showProject(id) {
         const projects = document.querySelectorAll('.project');
-        projects.forEach(p => p.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
+        projects.forEach(p => p.classList.remove('active', 'fullscreen'));
+        const selected = document.getElementById(id);
+        selected.classList.add('active');
+        if (id === 'proyecto1') selected.classList.add('fullscreen');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
