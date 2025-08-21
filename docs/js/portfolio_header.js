@@ -10,8 +10,24 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Secciones encontradas:', projectSections.length);
     console.log('Secciones:', Array.from(projectSections).map(s => s.id));
     
+    function resetAllToggles() {
+        const toggleSections = document.querySelectorAll('.detalles');
+        const toggleButtons = document.querySelectorAll('.toggle');
+        
+        toggleSections.forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        toggleButtons.forEach(button => {
+            button.textContent = 'Ver más detalles';
+        });
+    }
+
     // Función para mostrar una sección específica
     function showProject(targetId) {
+
+        resetAllToggles();
+
         console.log('Mostrando proyecto:', targetId);
         
         // Ocultar todas las secciones
@@ -64,16 +80,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Función para toggle de detalles del proyecto 1
     window.toggleDetalles = function() {
-        const detalles = document.getElementById('detallesProyecto1');
+        const toggleButtons = document.querySelectorAll('.detalles');
+        //const detalles = document.getElementById('detallesProyecto');
         const button = event.target;
         
-        if (detalles.style.display === 'none' || detalles.style.display === '') {
-            detalles.style.display = 'block';
-            button.textContent = 'Ver menos';
-        } else {
-            detalles.style.display = 'none';
-            button.textContent = 'Ver más';
-        }
+        toggleButtons.forEach(p => {
+            if (p.style.display === 'none' || p.style.display === '') {
+                p.style.display = 'block';
+                button.textContent = 'Ver menos';
+            } else {
+                p.style.display = 'none';
+                button.textContent = 'Ver más detalles';
+            }
+        })
     };
     
     // Actualizar el año en el footer
