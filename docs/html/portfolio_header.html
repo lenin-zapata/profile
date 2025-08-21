@@ -49,14 +49,14 @@
         <p>Este dashboard permite visualizar el grado de cumplimiento entre la demanda proyectada, las ventas y el abastecimiento. Está diseñado para apoyar la toma de decisiones estratégicas en áreas de planificación comercial, compras y logística, facilitando la identificación de brechas y oportunidades de mejora.</p>
         <p>La herramienta se alimenta de datos históricos y proyectados, y presenta indicadores clave que permiten evaluar el rendimiento por categoría, producto y periodo. Su implementación ha contribuido a mejorar la eficiencia operativa y la alineación entre áreas comerciales y operativas.</p>
         
-        <button onclick="toggleDetalles()">Ver más</button>
+        <button class="toggle" onclick="toggleDetalles()">Ver más detalles</button>
 
         <p></p>
         
         <div id="detallesProyecto1" class="detalles" style="display: none;">
-              <h3><i class="fas fa-bullseye"></i> ¿Cuál era el objetivo?</h3>
+              <h4><i class="fas fa-bullseye"></i> ¿Cuál era el objetivo?</h4>
               <p>Visualizar el cumplimiento de la demanda en relación con las ventas y el abastecimiento, permitiendo identificar brechas y oportunidades de mejora en la planificación comercial.</p>
-              <h3><i class="fas fa-chart-bar"></i> Indicadores que seguimos</h3>
+              <h4><i class="fas fa-chart-bar"></i> Indicadores que seguimos</h4>
               
               <ul>
                 <li><strong>Demanda:</strong> Proyección de ventas esperadas.</li>
@@ -65,11 +65,11 @@
                 <li><strong>Órdenes Totales:</strong> Número de pedidos procesados.</li>
               </ul>
               
-              <h3><i class="fas fa-tools"></i> Tecnologías que usamos</h3>
+              <h4><i class="fas fa-tools"></i> Tecnologías que usamos</h4>
               
               <p>Google Looker Studio para visualización, fuentes de datos conectadas desde hojas de cálculo y Firebase Database.</p>
               
-              <h3><i class="fas fa-chart-line"></i> Resultados obtenidos</h3>
+              <h4><i class="fas fa-chart-line"></i> Resultados obtenidos</h4>
               
               <p>Este dashboard ha transformado la gestión del área de planificación al proporcionar información precisa y en tiempo real sobre   
                 <strong>compras, producción y distribución</strong>. Gracias a su implementación, el equipo ha logrado:
@@ -96,21 +96,63 @@
     <!-- Proyecto 2 -->
     <section id="proyecto2" class="project" data-project hidden>
       <div class="project__header">
-        <h2 class="project__title" data-i18n="p2Title">Dashboard de Análisis de Ventas</h2>
+        <h2 class="project__title" data-i18n="p2Title">InsightBot: Chatbot Analítico con LLMs Open-Source</h2>
       </div>
         
       <div class="project__body">
         <h3><i class="fas fa-thumbtack"></i> Resumen del Proyecto</h3>
-        <p data-i18n="p2Desc">Dashboard interactivo para análisis de métricas de ventas y rendimiento comercial.</p>
+        <p data-i18n="p2Desc">Chatbot analítico empresarial que democratiza el acceso a insights de datos mediante inteligencia artificial conversacional, eliminando la necesidad de conocimientos técnicos para el análisis de datos.</p>
         
-        <h3><i class="fas fa-chart-line"></i> Funcionalidades</h3>
-        <ul>
-          <li>Análisis de tendencias de ventas</li>
-          <li>Comparativas por período</li>
-          <li>Métricas de rendimiento por equipo</li>
-        </ul>
-        
-        <button class="btn" type="button" data-i18n="seeMore">Ver más detalles</button>
+
+        <button class="toggle" onclick="toggleDetalles()">Ver más detalles</button>
+
+        <p></p>
+
+        <div id="detallesProyecto2" class="detalles" style="display: none;">
+
+          <h4><i class="fas fa-bullseye"></i> Propuesta de Valor</h4>
+          <p data-i18n="p2Desc">Permite a usuarios no técnicos obtener insights empresariales complejos a través de consultas en lenguaje natural, reduciendo el tiempo de análisis de horas a segundos.</p>          
+
+          <h4><i class="fas fa-rocket"></i> Innovación Técnica</h4>
+          <ul>
+            <li><strong>LLMs Open-Source:</strong> Implementación local de modelos Hugging Face (flan-t5-small) sin dependencias de APIs externas</li>
+            <li><strong>RAG Architecture:</strong> Sistema de recuperación aumentada que combina datos estructurados con capacidades conversacionales</li>
+            <li><strong>Interfaz Bilingüe:</strong> Soporte nativo español/inglés con detección automática de idioma</li>
+          </ul>
+
+          <h4><i class="fas fa-chart-line"></i> Capacidades Demostradas</h4>
+          <ul>
+            <li>Análisis de 100+ productos across 5 categorías empresariales
+            <li>Procesamiento de 24 meses de datos históricos (2022-2023)
+            <li>Generación de insights sobre ventas, márgenes y tendencias en tiempo real
+            <li>Visualización intuitiva de métricas KPI críticas
+          </ul>
+
+          <h4><i class="fas fa-cogs"></i> Stack Tecnológico</h4>
+            <p>Frontend: Streamlit | Backend: Python 3.9+ </p>
+            <p>AI/ML: Hugging Face Transformers, LangChain </p>
+            <p>Data: Pandas, NumPy | Deployment: Docker-ready </p>
+
+          <h4><i class="fas fa-graduation-cap"></i> Casos de Uso</h4>
+          <ul>
+            <li><strong>Retail Analytics:</strong> Análisis de inventario, ventas y tendencias</li>
+            <li><strong>Prototipado IA:</strong> Testing de LLMs en escenarios reales</li>
+            <li><strong>Educación:</strong> Herramienta didáctica para análisis de datos</li>
+            <li><strong>Enterprise:</strong> Solución on-premise para datos sensibles</li>
+          </ul>
+
+          <h4><i class="fas fa-chart-line"></i> Resultados obtenidos</h4>
+          <p>  
+            Una solución integral que transforma datos complejos en conversaciones inteligentes, posicionándose como bridge entre business intelligence tradicional y AI conversacional moderna.
+          </p>
+
+        </div>
+            
+        <iframe
+          class="project__iframe"
+          src="https://insightbot-leninzapata.streamlit.app/?embed=true"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
       </div>
     </section>
 
