@@ -6,10 +6,10 @@ function alt_image() {
 
     img.style.opacity = 0; // fade out
     if (estado) {
-      img.style.backgroundImage = 'url("../images/profile_picture.jpg")';
+      img.style.backgroundImage = 'url("./images/profile_picture.jpg")';
       img.alt = "Profile Picture";
     } else {
-      img.style.backgroundImage = 'url("../images/logo.jpg")';
+      img.style.backgroundImage = 'url("./images/logo.jpg")';
       img.alt = "Logo";
     }
     estado = !estado;
