@@ -4,7 +4,6 @@ function alt_image() {
   setInterval(() => {
     const img = document.getElementById("imagen");
 
-    img.style.opacity = 0; // fade out
     if (estado) {
       img.style.backgroundImage = 'url("./images/profile_picture.jpg")';
       img.alt = "Profile Picture";
@@ -13,7 +12,6 @@ function alt_image() {
       img.alt = "Logo";
     }
     estado = !estado;
-    img.style.opacity = 1; // fade in
   }, 5000);
 }
 
