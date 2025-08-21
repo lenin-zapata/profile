@@ -1,14 +1,3 @@
-function loadContent(page) {
-    fetch(page)
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('content').innerHTML = html;
-    })
-    .catch(error => {
-        document.getElementById('content').innerHTML = "<p>Error al cargar el contenido.</p>";
-    });
-}
-
 function alt_image() {
   let estado = true;
 
@@ -17,13 +6,18 @@ function alt_image() {
 
     img.style.opacity = 0; // fade out
     if (estado) {
-      img.style.backgroundImage = 'url("../images/logo.jpg")';
+      img.style.backgroundImage = 'url("../images/profile_picture.png")';
       img.alt = "Profile Picture";
     } else {
-      img.style.backgroundImage = 'url("../images/profile_picture.jpg")';
+      img.style.backgroundImage = 'url("../images/logo.jpg")';
       img.alt = "Logo";
     }
     estado = !estado;
     img.style.opacity = 1; // fade in
   }, 5000);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Actualizar el año en el footer
+  document.getElementById('year').innerText = new Date().getFullYear();
+})
