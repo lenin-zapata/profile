@@ -1,118 +1,138 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portafolio de Lenin Omar Zapata Esparza" />
-    <title>Portafolio de Lenin Zapata</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portafolio de Lenin Omar Zapata Esparza" />
   
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Portafolio de Lenin Zapata</title>
+  
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <script src="../js/portfolio_header.js" defer></script>
+  <script src="../js/portfolio_header.js" defer></script>
 
 </head>
 
 <body>
-    <a class="skip-link" href="#main">Saltar al contenido</a>
-
-    <header>
-        <div class="header-wrap">
-            <h1 class="site-title" data-i18n="siteTitle">Portafolio de Lenin Zapata</h1>
-
-            <nav aria-label="Navegación principal">
-                <button class="nav-btn" data-target="proyecto1" aria-current="page" data-i18n="navProject1">Proyecto 1</button>
-                <button class="nav-btn" data-target="proyecto2" data-i18n="navProject2">Proyecto 2</button>
-                <button class="nav-btn" data-target="mini-proyectos" data-i18n="navProject3">Proyecto 3</button>
-                <button id="langToggle" class="lang-btn" aria-label="Cambiar idioma">ESP</button>
-            </nav>   
-        </div>
-    </header>
-
-    <main id="main" class="container">
-        <div class="title-card">
-            <strong data-i18n="welcome">Bienvenido</strong>
-            <span> · </span>
-            <span data-i18n="welcomeMsg">Explora una selección de proyectos y ejemplos interactivos diseñados para impulsar la toma de decisiones con datos y demostrar soluciones innovadoras en analítica, visualización y automatización.</span>
-        </div>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  
+  <header>
+    <div class="header-wrap">
+      <h1 class="site-title" data-i18n="siteTitle">Portafolio de Lenin Zapata</h1>
+      
+      <nav aria-label="Navegación principal">
+        <button class="nav-btn" data-target="proyecto1" aria-current="page" data-i18n="navProject1">Proyecto 1</button>
+        <button class="nav-btn" data-target="proyecto2" data-i18n="navProject2">Proyecto 2</button>
+        <button class="nav-btn" data-target="proyecto3" data-i18n="navProject3">Proyecto 3</button>
+        <button id="langToggle" class="lang-btn" aria-label="Cambiar idioma">ESP</button>
+      </nav>   
+    </div>
+  </header>
+  
+  <main id="main" class="container">
+    
+    <div class="title-card">
+      <strong data-i18n="welcome">Bienvenido</strong>
+      <span> · </span>
+      <span data-i18n="welcomeMsg">Explora una selección de proyectos y ejemplos interactivos diseñados para impulsar la toma de decisiones con datos y demostrar soluciones innovadoras en analítica, visualización y automatización.</span>
+    </div>
 
     <!-- Proyecto 1 -->
     <section id="proyecto1" class="project" data-project>
-        <div class="project__header">
-            <h2 class="project__title" data-i18n="p1Title">Strategic Performance Monitor: Forecast, Sales & Inventory</h2>
-        </div>
-        <div class="project__body">
-            <h3><i class="fas fa-thumbtack"></i>  Resumen del Proyecto</h3>
-            <p>Este dashboard permite visualizar el grado de cumplimiento entre la demanda proyectada, las ventas y el abastecimiento. Está diseñado para apoyar la toma de decisiones estratégicas en áreas de planificación comercial, compras y logística, facilitando la identificación de brechas y oportunidades de mejora.</p>
-            <p>La herramienta se alimenta de datos históricos y proyectados, y presenta indicadores clave que permiten evaluar el rendimiento por categoría, producto y periodo. Su implementación ha contribuido a mejorar la eficiencia operativa y la alineación entre áreas comerciales y operativas.</p>
-            
-            <button onclick="toggleDetalles()">Ver más</button>
-            
-            <p></p>
-            
-            <div id="detallesProyecto1" class="detalles" style="display: none;">
-                <h3><i class="fas fa-bullseye"></i> ¿Cuál era el objetivo?</h3>
+      <div class="project__header">  
+        <h2 class="project__title" data-i18n="p1Title">Monitor de Rendimiento Estratégico: Proyecciones, Ventas y Stock</h2>
+      </div>
+      
+      <div class="project__body">
+        <h3><i class="fas fa-thumbtack"></i>  Resumen del Proyecto</h3>
+        <p>Este dashboard permite visualizar el grado de cumplimiento entre la demanda proyectada, las ventas y el abastecimiento. Está diseñado para apoyar la toma de decisiones estratégicas en áreas de planificación comercial, compras y logística, facilitando la identificación de brechas y oportunidades de mejora.</p>
+        <p>La herramienta se alimenta de datos históricos y proyectados, y presenta indicadores clave que permiten evaluar el rendimiento por categoría, producto y periodo. Su implementación ha contribuido a mejorar la eficiencia operativa y la alineación entre áreas comerciales y operativas.</p>
+        
+        <button onclick="toggleDetalles()">Ver más</button>
 
-                <p>Visualizar el cumplimiento de la demanda en relación con las ventas y el abastecimiento, permitiendo identificar brechas y oportunidades de mejora en la planificación comercial.</p>
-            
-                <h3><i class="fas fa-chart-bar"></i> Indicadores que seguimos</h3>
-
-                <ul>
-                    <li><strong>Demanda:</strong> Proyección de ventas esperadas.</li>
-                    <li><strong>Ventas:</strong> Ventas reales registradas.</li>
-                    <li><strong>Abastecimiento:</strong> Inventario disponible para cubrir la demanda.</li>
-                    <li><strong>Órdenes Totales:</strong> Número de pedidos procesados.</li>
-                </ul>
-            
-                
-                <h3><i class="fas fa-tools"></i> Tecnologías que usamos</h3>
-
-
-                <p>Google Looker Studio para visualización, fuentes de datos conectadas desde hojas de cálculo y Firebase Database.</p>
-                
-                
-                <h3><i class="fas fa-chart-line"></i> Resultados obtenidos</h3>
-
-                
-                <p>Este dashboard ha transformado la gestión del área de planificación al proporcionar información precisa y en tiempo real sobre 
-                    <strong>compras, producción y distribución</strong>. Gracias a su implementación, el equipo ha logrado:
-                </p>
-                <ul>
-                    <li><strong>Reducir el riesgo de desabastecimiento</strong>, anticipando necesidades críticas.</li>
-                    <li><strong>Optimizar la eficiencia operativa</strong>, mejorando la coordinación entre áreas.</li>
-                    <li><strong>Tomar decisiones basadas en datos confiables</strong>, impulsando una planificación más estratégica.</li>
-                </ul>
-                <p>
-                    El resultado: <strong>procesos más ágiles, menor desperdicio y una cadena de suministro más robusta</strong>.
-                </p>
- 
+        <p></p>
+        
+        <div id="detallesProyecto1" class="detalles" style="display: none;">
+              <h3><i class="fas fa-bullseye"></i> ¿Cuál era el objetivo?</h3>
+              <p>Visualizar el cumplimiento de la demanda en relación con las ventas y el abastecimiento, permitiendo identificar brechas y oportunidades de mejora en la planificación comercial.</p>
+              <h3><i class="fas fa-chart-bar"></i> Indicadores que seguimos</h3>
+              
+              <ul>
+                <li><strong>Demanda:</strong> Proyección de ventas esperadas.</li>
+                <li><strong>Ventas:</strong> Ventas reales registradas.</li>
+                <li><strong>Abastecimiento:</strong> Inventario disponible para cubrir la demanda.</li>
+                <li><strong>Órdenes Totales:</strong> Número de pedidos procesados.</li>
+              </ul>
+              
+              <h3><i class="fas fa-tools"></i> Tecnologías que usamos</h3>
+              
+              <p>Google Looker Studio para visualización, fuentes de datos conectadas desde hojas de cálculo y Firebase Database.</p>
+              
+              <h3><i class="fas fa-chart-line"></i> Resultados obtenidos</h3>
+              
+              <p>Este dashboard ha transformado la gestión del área de planificación al proporcionar información precisa y en tiempo real sobre   
+                <strong>compras, producción y distribución</strong>. Gracias a su implementación, el equipo ha logrado:
+              </p>
+              
+              <ul>
+                <li><strong>Reducir el riesgo de desabastecimiento</strong>, anticipando necesidades críticas.</li>
+                <li><strong>Optimizar la eficiencia operativa</strong>, mejorando la coordinación entre áreas.</li>
+                <li><strong>Tomar decisiones basadas en datos confiables</strong>, impulsando una planificación más estratégica.</li>
+              </ul>
+              
+              <p>
+                El resultado: <strong>procesos más ágiles, menor desperdicio y una cadena de suministro más robusta</strong>.
+              </p>
+    
 
             </div>
-            
-            <!-- Ejemplo de incrustación (reemplaza la src por la tuya) -->
-            <iframe class="project__iframe" src="https://lookerstudio.google.com/embed/reporting/0f8aaeab-fba3-4386-b88e-d70e54ae994f/page/1y1TF" gallery" aria-label="Galería Proyecto 1">
+        
+        <iframe class="project__iframe" src="https://lookerstudio.google.com/embed/reporting/0f8aaeab-fba3-4386-b88e-d70e54ae994f/page/1y1TF"></iframe>
+      </div>
     </section>
+
 
     <!-- Proyecto 2 -->
     <section id="proyecto2" class="project" data-project hidden>
       <div class="project__header">
-        <h2 class="project__title" data-i18n="p2Title">Proyecto 2</h2>
+        <h2 class="project__title" data-i18n="p2Title">Dashboard de Análisis de Ventas</h2>
       </div>
+        
       <div class="project__body">
-        <p data-i18n="p2Desc">Descripción breve del Proyecto 2.</p>
-        <button class="btn" type="button" data-i18n="seeMore">Ver más</button>
+        <h3><i class="fas fa-thumbtack"></i> Resumen del Proyecto</h3>
+        <p data-i18n="p2Desc">Dashboard interactivo para análisis de métricas de ventas y rendimiento comercial.</p>
+        
+        <h3><i class="fas fa-chart-line"></i> Funcionalidades</h3>
+        <ul>
+          <li>Análisis de tendencias de ventas</li>
+          <li>Comparativas por período</li>
+          <li>Métricas de rendimiento por equipo</li>
+        </ul>
+        
+        <button class="btn" type="button" data-i18n="seeMore">Ver más detalles</button>
       </div>
     </section>
 
-    <!-- Snippets -->
-    <section id="mini-proyectos" class="project" data-project hidden>
+<!-- Proyecto 3 -->
+    <section id="proyecto3" class="project" data-project hidden>
       <div class="project__header">
-        <h2 class="project__title" data-i18n="snippetsTitle">Snippets Útiles</h2>
+        <h2 class="project__title" data-i18n="snippetsTitle">Extractos Útiles</h2>
       </div>
+      
       <div class="project__body">
         <p data-i18n="snippetsDesc">Pequeños fragmentos de código que uso con frecuencia.</p>
-        <pre><code>// Ejemplo
-function saludo(nombre){ return `Hola, ${nombre}`; }</code></pre>
+        <h4>Ejemplo JavaScript</h4>
+        <pre><code>// Función de saludo
+          function saludo(nombre) { 
+            return `Hola, ${nombre}!`; 
+            }</code></pre>
+            
+            <h4>Query SQL</h4>
+            <pre><code>SELECT producto, SUM(ventas) as total
+              FROM ventas_mensuales 
+              GROUP BY producto 
+              ORDER BY total DESC;</code></pre>
       </div>
     </section>
   </main>
