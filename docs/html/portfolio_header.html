@@ -17,17 +17,35 @@
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
   
-  <header>
-    <div class="header-wrap">
-      <h1 class="site-title" data-i18n="siteTitle">Portafolio de Lenin Zapata</h1>
+
+  <header class="header-demo">
+    <h1>Portafolio de Lenin Zapata</h1>
+    
+    <nav class="nav-buttons" aria-label="Navegación principal">
+      <button class="nav-btn" data-target="proyecto1" aria-current="page" data-i18n="navProject1">Proyecto 1</button>
+      <button class="nav-btn" data-target="proyecto2" data-i18n="navProject2">Proyecto 2</button>
+      <button class="nav-btn" data-target="proyecto3" data-i18n="navProject3">Proyecto 3</button>
       
-      <nav aria-label="Navegación principal">
-        <button class="nav-btn" data-target="proyecto1" aria-current="page" data-i18n="navProject1">Proyecto 1</button>
-        <button class="nav-btn" data-target="proyecto2" data-i18n="navProject2">Proyecto 2</button>
-        <button class="nav-btn" data-target="proyecto3" data-i18n="navProject3">Proyecto 3</button>
-        <button id="langToggle" class="lang-btn" aria-label="Cambiar idioma">ESP</button>
-      </nav>   
-    </div>
+      <div class="language-selector">
+        <div class="current-lang">
+          <i class="fas fa-globe-americas"></i>
+          <span>ES</span>
+          <i class="fas fa-caret-down arrow"></i>
+        </div>
+        <ul class="language-menu">
+          <li data-lang="es">
+            <i class="fas fa-globe-americas"></i>
+            <span>Español</span>
+          </li>
+          <li data-lang="en">
+            <i class="fas fa-globe-americas"></i>
+            <span>English</span>
+          </li>
+        </ul>
+      </div>
+      
+    </nav> 
+    
   </header>
   
   <main id="main" class="container">
@@ -38,9 +56,8 @@
       <span data-i18n="welcomeMsg">Explora una selección de proyectos y ejemplos interactivos diseñados para impulsar la toma de decisiones con datos y demostrar soluciones innovadoras en analítica, visualización y automatización.</span>
     </div>
 
-    <!-- Proyecto 1 -->
     <section id="proyecto1" class="project" data-project>
-      <div class="project__header">  
+      <div class="project__header"> 
         <h2 class="project__title" data-i18n="p1Title">Monitor de Rendimiento Estratégico: Proyecciones, Ventas y Stock</h2>
       </div>
       
@@ -84,8 +101,7 @@
               <p>
                 El resultado: <strong>procesos más ágiles, menor desperdicio y una cadena de suministro más robusta</strong>.
               </p>
-    
-
+      
             </div>
         
         <iframe class="project__iframe" src="https://lookerstudio.google.com/embed/reporting/0f8aaeab-fba3-4386-b88e-d70e54ae994f/page/1y1TF"></iframe>
@@ -93,7 +109,6 @@
     </section>
 
 
-    <!-- Proyecto 2 -->
     <section id="proyecto2" class="project" data-project hidden>
       <div class="project__header">
         <h2 class="project__title" data-i18n="p2Title">InsightBot: Chatbot Analítico con LLMs Open-Source</h2>
@@ -147,7 +162,7 @@
           </p>
 
         </div>
-            
+          
         <iframe
           class="project__iframe"
           src="https://insightbot-leninzapata.streamlit.app/?embed=true"
@@ -156,8 +171,7 @@
       </div>
     </section>
 
-<!-- Proyecto 3 -->
-    <section id="proyecto3" class="project" data-project hidden>
+<section id="proyecto3" class="project" data-project hidden>
       <div class="project__header">
         <h2 class="project__title" data-i18n="snippetsTitle">Extractos Útiles</h2>
       </div>
@@ -179,14 +193,39 @@
     </section>
   </main>
 
-  <!-- Lightbox -->
-  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
-    <img alt="" />
-  </div>
-
-  <footer>
-    &copy; <span id="year"></span> Lenin Zapata
-  </footer>
+  <footer class="custom-footer">
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="footer-content">
+            <div class="author-section">
+                <div class="author-title">Desarrollado por</div>
+                <div class="author-name">
+                    <span class="highlight">Lenin Zapata</span>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; <span id="year">2025</span> - Hecho con <span class="heart">♥</span> y mucho café
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/leninzapata-profile" class="social-btn linkedin" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/lenin-zapata" class="social-btn github" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://instagram.com/lenin.ze" class="social-btn instagram" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
