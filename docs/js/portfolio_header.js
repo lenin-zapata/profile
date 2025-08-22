@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Obtener todos los botones de navegación y secciones
     const navButtons = document.querySelectorAll('.nav-btn');
     const projectSections = document.querySelectorAll('[data-project]');
-    const langToggle = document.getElementById('langToggle');
+    //const langToggle = document.getElementById('langToggle');
     
     // Debug logs
     console.log('Botones encontrados:', navButtons.length);
@@ -101,17 +101,42 @@ document.addEventListener('DOMContentLoaded', function() {
         yearElement.textContent = new Date().getFullYear();
     }
     
-    // Funcionalidad del botón de idioma (básica)
-    if (langToggle) {
-        langToggle.addEventListener('click', function() {
-            if (this.textContent === 'ESP') {
-                this.textContent = 'ENG';
-                this.setAttribute('aria-label', 'Switch language');
-                // Aquí podrías agregar la lógica de traducción
-            } else {
-                this.textContent = 'ESP';
-                this.setAttribute('aria-label', 'Cambiar idioma');
-            }
-        });
-    }
+
+
+
+    const langSelector = document.querySelector('.language-selector');
+    const langMenu = document.querySelector('.language-menu');
+    const currentLangText = document.querySelector('.current-lang span');
+
+    // Muestra/oculta el menú al hacer clic
+    langSelector.addEventListener('click', (event) => {
+        event.stopPropagation(); // Evita que el clic se propague al documento
+        langSelector.classList.toggle('open');
+    });
+
+    // Cambia el texto del botón al seleccionar un idioma
+    langMenu.addEventListener('click', (event) => {
+        const selectedLang = event.target.closest('li');
+        if (selectedLang) {
+            const langCode = selectedLang.dataset.lang;
+            const langText = selectedLang.querySelector('span').textContent;
+            
+            // Actualiza el texto del botón principal
+            currentLangText.textContent = langCode.toUpperCase();
+            
+            // Puedes agregar aquí la lógica para cambiar el contenido de tu página
+            // Por ejemplo: cambiar un atributo "lang" en el <html>
+            document.documentElement.lang = langCode;
+            
+            // Cierra el menú
+            langSelector.classList.remove('open');
+        }
+    });
+
+    // Cierra el menú si se hace clic fuera de él
+    document.addEventListener('click', () => {
+        if (langSelector.classList.contains('open')) {
+            langSelector.classList.remove('open');
+        }
+    });
 });
