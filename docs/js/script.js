@@ -5,10 +5,10 @@ function alt_image() {
     const img = document.getElementById("profile-image");
 
     if (estado) {
-      img.style.backgroundImage = 'url("../images/profile_picture.jpg")';
+      img.style.backgroundImage = 'url("./images/profile_picture.jpg")';
       img.alt = "Profile Picture";
     } else {
-      img.style.backgroundImage = 'url("../images/logo.jpg")';
+      img.style.backgroundImage = 'url("./images/logo.jpg")';
       img.alt = "Logo";
     }
     estado = !estado;
