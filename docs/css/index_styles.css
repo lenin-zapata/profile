@@ -34,7 +34,7 @@ body {
 }
 
 .profile-image-container {
-  background-image: url("../images/profile_picture.jpg");
+  background-image: url("../images/logo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; 
