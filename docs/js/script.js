@@ -12,7 +12,7 @@ function alt_image() {
       img.alt = "Logo";
     }
     estado = !estado;
-  }, 5000);
+  }, 2500);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
